@@ -19,5 +19,5 @@ end
 
 has_keyword_argument?(method: proc { hello(name: 'Irrelevant') }, keyword: 'name').must_equal 'name'
 
-has_keyword_argument?(method: proc { greeting(greeting: "Hello", name: 'Irrelevant') }, keyword: ['greeting', 'name']).must_equal ['greeting', 'name']
+has_keyword_argument?(method: proc { greeting(greeting: 'Hello', name: 'Irrelevant') }, keyword: ['greeting', 'name']).must_equal ['greeting', 'name']
 ```
