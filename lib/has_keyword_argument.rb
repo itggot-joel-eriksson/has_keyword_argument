@@ -16,6 +16,11 @@ class Symbol
             end
         end
 
-        keyreq_params.must_equal keyreq_params & keyword
+        unless keyword == keyreq_params
+            keyword_product = keyword.permutation.to_a
+            keyword = keyword_product[keyword_product.index(keyreq_params)] if keyword_product.include? keyreq_params
+        end
+
+        keyreq_params.must_equal keyword
     end
 end

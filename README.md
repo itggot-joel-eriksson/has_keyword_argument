@@ -8,7 +8,7 @@ gem install has_keyword_argument
 
 ## API
 
-`#.has_keyword_argument?(*keyword)`
+`#has_keyword_argument?(*keyword)`
 
 _lib/main.rb_
 ```ruby
