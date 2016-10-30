@@ -11,7 +11,6 @@ class Symbol
 
         params = method(self).parameters
         params.each do |param|
-            p param
             if param.first == :keyreq
                 keyreq_params << param.last
             end
